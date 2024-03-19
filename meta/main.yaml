@@ -1,1 +1,27 @@
 dependencies: []
+
+galaxy_info:
+  role_name: install_vim
+  author: HiddeHandel
+  description: install vim on ubuntu,debian,fedora
+  company: "my git repo"
+  license: "license"
+  min_ansible_version: 2.10
+  platforms:
+    - name: Fedora
+      versions:
+        - all
+    - name: Debian
+      versions:
+        - buster
+        - bullseye
+        - bookworm
+    - name: Ubuntu
+      versions:
+        - bionic
+        - focal
+        - jammy
+  galaxy_tags:
+    - system
+    - orchestration
+    - server
