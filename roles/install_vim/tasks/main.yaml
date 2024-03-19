@@ -1,0 +1,17 @@
+  - name: Distribution
+    debug: msg="{{ ansible_distribution }}"
+    register: output
+
+  - debug: var=output.stdout_lines 
+
+  - name: install vim deb
+    apt:
+      name: vim
+      state: present
+    when: ansible_distribution == "Ubuntu" or ansible_distribution == "Debian"
+
+  - name: install vim fedora
+    dnf:
+      name: vim
+      state: present
+    when: ansible_distribution == "Fedora"

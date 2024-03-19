@@ -1,0 +1,7 @@
+- name: install vim deb and fedora
+  hosts: changeme
+  remote_user: changeme
+  become: yes
+  roles:
+    - install_vim
+
